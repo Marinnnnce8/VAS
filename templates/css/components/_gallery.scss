@@ -1,0 +1,36 @@
+.gallery {
+
+	&-wrap {
+		margin: 0 -2px;
+		overflow: hidden;
+	}
+
+	&-row {
+		display: table;
+		width: 100%;
+	}
+
+	&-image {
+		border: 2px solid transparent;
+		display: table-cell;
+		margin: 0;
+		outline: none;
+		overflow: hidden;
+		position: relative;
+		vertical-align: top;
+
+		img {
+			height: auto;
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	&-caption {
+		@include image-caption;
+	}
+
+	.uk-container-expand & {
+		margin: 0 2px;
+	}
+}

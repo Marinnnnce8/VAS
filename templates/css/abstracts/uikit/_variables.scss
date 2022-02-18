@@ -1,0 +1,578 @@
+//
+// Breakpoints
+//
+$breakpoint-small: 640px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1600px;
+$breakpoint-xsmall-max: ($breakpoint-small - 1);
+$breakpoint-small-max: ($breakpoint-medium - 1);
+$breakpoint-medium-max: ($breakpoint-large - 1);
+$breakpoint-large-max: ($breakpoint-xlarge - 1);
+$breakpoint-mobile: 479px; // Custom
+
+
+//
+// Global Variables
+//
+
+// Typography
+$global-font-family: $font-default;
+$global-font-size: $font-size;
+$global-line-height: $line-height;
+$global-2xlarge-font-size: 2.625rem;
+$global-xlarge-font-size: 2rem;
+$global-large-font-size: 1.5rem;
+$global-medium-font-size: 1.25rem;
+$global-small-font-size: 0.875rem;
+
+// Colors
+$global-color: $black;
+$global-emphasis-color: $black;
+$global-muted-color: $grey;
+$global-link-color: $primary;
+$global-link-hover-color: $primary;
+$global-inverse-color: $white;
+
+// Backgrounds
+$global-background: $white;
+$global-muted-background: $off-white;
+$global-primary-background: $primary;
+$global-secondary-background: $secondary;
+$global-success-background: $success;
+$global-warning-background: $warning;
+$global-danger-background: $danger;
+
+// Borders
+$global-border-width: 1px;
+$global-border: $light-grey;
+
+// Spacings
+$global-margin: 20px;
+$global-small-margin: 10px;
+$global-medium-margin: 40px;
+$global-large-margin: 70px;
+$global-xlarge-margin: 135px;
+$global-gutter: 30px;
+$global-gutter-half: 15px;
+$global-small-gutter: 20px;
+$global-medium-gutter: 40px;
+$global-large-gutter: 70px;
+$global-large-gutter-half: 35px;
+
+// Controls
+$global-control-height: 48px;
+$global-control-small-height: 40px;
+$global-control-large-height: 70px;
+
+
+//
+// Base
+//
+$base-body-font-weight: 400;
+$base-link-hover-text-decoration: underline;
+$base-strong-font-weight: $bold;
+$base-code-color: inherit;
+$base-em-color: inherit;
+$base-selection-background: $secondary;
+
+$base-body-background: $global-background;
+$base-body-font-family: $global-font-family;
+$base-body-font-size: $global-font-size;
+$base-body-line-height: $global-line-height;
+$base-body-color: $global-color;
+
+$base-link-color: $global-link-color !default;
+$base-link-text-decoration: none !default;
+$base-link-hover-color: $global-link-hover-color !default;
+$base-link-hover-text-decoration: underline !default;
+
+$base-strong-font-weight: bolder !default;
+$base-code-font-size: $global-small-font-size !default;
+$base-code-font-family: Consolas, monaco, monospace !default;
+$base-code-color: $global-danger-background !default;
+$base-em-color: $global-danger-background !default;
+$base-ins-background: #ffd !default;
+$base-ins-color: $global-color !default;
+$base-mark-background: #ffd !default;
+$base-mark-color: $global-color !default;
+$base-quote-font-style: italic !default;
+$base-small-font-size: 80% !default;
+
+$base-margin-vertical: 30px; //$global-margin !default;
+
+$base-heading-font-family: $font-alt;
+$base-heading-font-weight: 300;
+$base-heading-color: $global-emphasis-color !default;
+$base-heading-text-transform: none !default;
+$base-heading-margin-top: $global-medium-margin !default;
+$base-h1-font-size-m: 57px; //$global-2xlarge-font-size !default;
+$base-h1-font-size: $base-h1-font-size-m * 0.85 !default;
+$base-h1-line-height: 1.2 !default;
+$base-h2-font-size-m: 44px; //$global-xlarge-font-size !default;
+$base-h2-font-size: $base-h2-font-size-m * 0.85 !default;
+$base-h2-line-height: 1.3 !default;
+$base-h3-font-size: 34px; //$global-large-font-size !default;
+$base-h3-line-height: 1.4 !default;
+$base-h4-font-size: 26px; //$global-medium-font-size !default;
+$base-h4-line-height: 1.4 !default;
+$base-h5-font-size: 20px; //$global-font-size !default;
+$base-h5-line-height: 1.4 !default;
+$base-h6-font-size: 18px; //$global-small-font-size !default;
+$base-h6-line-height: 1.4 !default;
+
+$base-list-padding-left: 30px !default;
+
+$base-blockquote-font-size: 34px;
+$base-blockquote-line-height: 51px;
+$base-blockquote-font-style: normal;
+$base-blockquote-margin-vertical: 40px;
+$base-blockquote-footer-margin-top: 40px;
+$base-blockquote-footer-font-size: $global-small-font-size !default;
+$base-blockquote-footer-line-height: 1.5 !default;
+
+
+//
+// Form
+//
+$form-height:                                    $global-control-height !default;
+$form-line-height:                               $form-height !default;
+$form-padding-horizontal:                        10px !default;
+$form-padding-vertical:                          round($form-padding-horizontal * 0.6) !default;
+
+$form-background:                                $global-muted-background !default;
+$form-color:                                     $global-color !default;
+
+$form-focus-background:                          darken($form-background, 5%) !default;
+$form-focus-color:                               $global-color !default;
+
+$form-disabled-background:                       $global-muted-background !default;
+$form-disabled-color:                            $global-muted-color !default;
+
+$form-placeholder-color:                         $global-muted-color !default;
+
+$form-small-height:                              $global-control-small-height !default;
+$form-small-padding-horizontal:                  8px !default;
+$form-small-padding-vertical:                    round($form-small-padding-horizontal * 0.6) !default;
+$form-small-line-height:                         $form-small-height !default;
+$form-small-font-size:                           $global-small-font-size !default;
+
+$form-large-height:                              $global-control-large-height !default;
+$form-large-padding-horizontal:                  12px !default;
+$form-large-padding-vertical:                    round($form-large-padding-horizontal * 0.6) !default;
+$form-large-line-height:                         $form-large-height !default;
+$form-large-font-size:                           $global-medium-font-size !default;
+
+$form-danger-color:                              $global-danger-background !default;
+$form-success-color:                             $global-success-background !default;
+
+$form-width-xsmall:                              50px !default;
+$form-width-small:                               130px !default;
+$form-width-medium:                              200px !default;
+$form-width-large:                               500px !default;
+
+$form-select-padding-right:                      20px !default;
+$form-select-icon-color:                         $global-color !default;
+$form-select-option-color:                       $global-color !default;
+$form-select-disabled-icon-color:                $global-muted-color !default;
+
+$form-datalist-padding-right:                    20px !default;
+$form-datalist-icon-color:                       $global-color !default;
+
+$form-radio-size:                                28px;
+$form-radio-margin-top:                          -4px !default;
+$form-radio-background:                          darken($global-muted-background, 5%) !default;
+
+$form-radio-focus-background:                    darken($form-radio-background, 5%) !default;
+
+$form-radio-checked-background:                  $global-primary-background !default;
+$form-radio-checked-icon-color:                  $global-inverse-color !default;
+
+$form-radio-checked-focus-background:            darken($global-primary-background, 10%) !default;
+
+$form-radio-disabled-background:                 $global-muted-background !default;
+$form-radio-disabled-icon-color:                 $global-muted-color !default;
+
+$form-legend-font-size:                          $global-large-font-size !default;
+$form-legend-line-height:                        1.4 !default;
+
+$form-stacked-margin-bottom:                     $global-small-margin !default;
+
+$form-horizontal-label-width:                    200px !default;
+$form-horizontal-label-margin-top:               7px !default;
+$form-horizontal-controls-margin-left:           215px !default;
+$form-horizontal-controls-text-padding-top:      7px !default;
+
+$form-icon-width:                                $form-height !default;
+$form-icon-color:                                $global-muted-color !default;
+$form-icon-hover-color:                          $global-color !default;
+
+
+//
+// Container
+//
+$container-max-width: 1200px;
+$container-xsmall-max-width: 786px;
+$container-small-max-width: 900px;
+$container-large-max-width: 1400px;
+$container-xlarge-max-width: 1600px;
+$container-padding-horizontal: 20px;
+$container-padding-horizontal-s: $global-gutter;
+$container-padding-horizontal-m: $global-medium-gutter;
+
+
+//
+// Text
+//
+
+
+$text-lead-font-size: 20px;
+$text-lead-line-height: 1.7;
+$text-lead-color: $global-color;
+
+$text-meta-font-size: $global-small-font-size !default;
+$text-meta-line-height: 1.4 !default;
+$text-meta-color: $global-muted-color !default;
+
+$text-small-font-size: $global-small-font-size !default;
+$text-small-line-height: 1.5 !default;
+
+$text-large-font-size: $global-large-font-size !default;
+$text-large-line-height: 1.5 !default;
+
+$text-muted-color: $global-muted-color !default;
+$text-emphasis-color: $global-emphasis-color !default;
+$text-primary-color: $global-primary-background !default;
+$text-secondary-color: $global-secondary-background !default;
+$text-success-color: $global-success-background !default;
+$text-warning-color: $global-warning-background !default;
+$text-danger-color: $global-danger-background !default;
+
+$text-background-color: $global-primary-background !default;
+
+
+//
+// Alert
+//
+$alert-margin-vertical: $global-margin !default;
+$alert-padding: 15px !default;
+$alert-padding-right: $alert-padding + 14px !default;
+$alert-background: $global-muted-background !default;
+$alert-color: $global-color !default;
+
+$alert-close-top: $alert-padding + 5px !default;
+$alert-close-right: $alert-padding !default;
+
+$alert-primary-background: #7bceff;
+$alert-primary-color: #1f1447;
+
+$alert-success-background: #51fedd;
+$alert-success-color: #1f1447;
+
+$alert-warning-background: #ffe479;
+$alert-warning-color: #1f1447;
+
+$alert-danger-background: #ffb1e1;
+$alert-danger-color: #1f1447;
+
+
+//
+// Grid
+//
+$grid-gutter-horizontal: $global-gutter;
+$grid-gutter-horizontal-l: $global-medium-gutter;
+$grid-large-gutter-horizontal: $global-medium-gutter;
+$grid-large-gutter-horizontal-l: $global-large-gutter;
+
+
+//
+// Breadcrumb
+//
+$breadcrumb-item-color: $global-muted-color;
+$breadcrumb-divider: '/';
+$breadcrumb-divider-margin-horizontal: $global-margin;
+$breadcrumb-divider-color: $global-color;
+
+
+//
+// Lightbox
+//
+$lightbox-item-max-width: 95vw;
+$lightbox-item-max-height: 85vh;
+
+
+//
+// Animation
+//
+$animation-duration: $speed;
+$animation-fade-duration: $speed-slow;
+$animation-fast-duration: $speed-fast;
+
+
+//
+// Text
+//
+$text-lead-font-size: $global-large-font-size;
+$text-lead-line-height: $global-line-height;
+$text-lead-color: $global-emphasis-color;
+$text-meta-color: $global-muted-color;
+
+
+//
+// Inverse
+//
+
+$inverse-global-color: #fff;
+$inverse-global-emphasis-color: $global-inverse-color !default;
+$inverse-global-muted-color: #fff;
+$inverse-global-inverse-color: $global-color !default;
+
+$inverse-global-primary-background: $global-inverse-color !default;
+$inverse-global-muted-background: #fff;
+
+$inverse-global-border: #fff;
+
+
+//
+// Navbar nav
+//
+
+$navbar-background: $blue;
+
+$navbar-nav-item-height: 70px;
+$navbar-nav-item-padding-horizontal: 15px;
+$navbar-nav-item-color: #fff; //$global-muted-color !default;
+$navbar-nav-item-font-size: 18px; //$global-font-size !default;
+$navbar-nav-item-hover-color: $green;
+$navbar-nav-item-onclick-color: $green;
+$navbar-nav-item-active-color: $green;
+
+$navbar-item-color: #fff;
+
+$navbar-toggle-color: #fff;
+$navbar-toggle-hover-color: #fff;
+
+$navbar-subtitle-font-size: $global-small-font-size !default;
+
+$navbar-dropdown-width: 280px;
+$navbar-dropdown-margin: 0 !default;
+$navbar-dropdown-padding: 25px 11px;
+$navbar-dropdown-background: #fff; //$global-muted-background !default;
+$navbar-dropdown-color: $dark-purple; //$global-color !default;
+$navbar-dropdown-grid-gutter-horizontal: $global-gutter !default;
+$navbar-dropdown-grid-gutter-vertical: $navbar-dropdown-grid-gutter-horizontal !default;
+
+$navbar-dropdown-dropbar-margin-top: 0 !default;
+$navbar-dropdown-dropbar-margin-bottom: $navbar-dropdown-dropbar-margin-top !default;
+
+$navbar-dropdown-nav-item-color: $dark-purple;
+$navbar-dropdown-nav-item-hover-color: $dark-purple;
+$navbar-dropdown-nav-item-active-color: $dark-purple;
+$navbar-dropdown-nav-header-color: $global-emphasis-color !default;
+$navbar-dropdown-nav-divider-border-width: $global-border-width !default;
+$navbar-dropdown-nav-divider-border: $global-border !default;
+$navbar-dropdown-nav-sublist-item-color: $global-muted-color !default;
+$navbar-dropdown-nav-sublist-item-hover-color: $global-color !default;
+$navbar-dropdown-nav-sublist-item-active-color: $global-emphasis-color !default;
+
+$navbar-dropbar-background: $navbar-dropdown-background !default;
+
+
+//
+// Buttons
+//
+
+$button-font-size: 16px; //$global-font-size !default;
+$button-small-font-size: 14px; //$global-small-font-size !default;
+$button-large-font-size: 18px; //$global-medium-font-size !default;
+
+$button-padding-horizontal: 25px; //$global-gutter !default;
+$button-small-padding-horizontal: 20px; //$global-small-gutter !default;
+$button-large-padding-horizontal: 30px; //$global-medium-gutter !default;
+
+$button-default-background: transparent;
+$button-default-color: $global-color !default;
+$button-default-hover-background: darken($button-default-background, 5%) !default;
+$button-default-hover-color: #fff; //$global-emphasis-color !default;
+$button-default-active-background: darken($button-default-background, 10%) !default;
+$button-default-active-color: $global-emphasis-color !default;
+
+$button-primary-background: $green;
+$button-primary-color: $dark-purple;
+$button-primary-hover-background: $green;
+$button-primary-hover-color: $global-inverse-color !default;
+$button-primary-active-background: darken($button-primary-background, 10%) !default;
+$button-primary-active-color: $global-inverse-color !default;
+
+$button-secondary-background: $global-secondary-background !default;
+$button-secondary-color: $global-inverse-color !default;
+$button-secondary-hover-background: darken($button-secondary-background, 5%) !default;
+$button-secondary-hover-color: $global-inverse-color !default;
+$button-secondary-active-background: darken($button-secondary-background, 10%) !default;
+$button-secondary-active-color: $global-inverse-color !default;
+
+$button-danger-background: $global-danger-background !default;
+$button-danger-color: $global-inverse-color !default;
+$button-danger-hover-background: darken($button-danger-background, 5%) !default;
+$button-danger-hover-color: $global-inverse-color !default;
+$button-danger-active-background: darken($button-danger-background, 10%) !default;
+$button-danger-active-color: $global-inverse-color !default;
+
+$button-disabled-background: $global-muted-background !default;
+$button-disabled-color: $global-muted-color !default;
+
+$button-text-line-height: $global-line-height !default;
+$button-text-color: #1f1447;
+$button-text-hover-color: #1f1447;
+$button-text-disabled-color: $global-muted-color !default;
+
+$button-link-line-height: $global-line-height !default;
+$button-link-color: $global-emphasis-color !default;
+$button-link-hover-color: $global-muted-color !default;
+$button-link-hover-text-decoration: none !default;
+$button-link-disabled-color: $global-muted-color !default;
+
+//
+// Card
+//
+
+$card-body-padding-horizontal: $global-gutter !default;
+$card-body-padding-vertical: $global-gutter !default;
+
+$card-body-padding-horizontal-l: $global-medium-gutter !default;
+$card-body-padding-vertical-l: $global-medium-gutter !default;
+
+$card-header-padding-horizontal: $global-gutter !default;
+$card-header-padding-vertical: $global-gutter-half !default;
+
+$card-header-padding-horizontal-l: $global-medium-gutter !default;
+$card-header-padding-vertical-l: $global-small-gutter !default;
+
+$card-footer-padding-horizontal: $global-gutter !default;
+$card-footer-padding-vertical: $global-gutter-half !default;
+
+$card-footer-padding-horizontal-l: $global-medium-gutter !default;
+$card-footer-padding-vertical-l: $global-small-gutter !default;
+
+$card-title-font-size: $global-large-font-size !default;
+$card-title-line-height: 1.4 !default;
+
+$card-badge-top: 15px !default;
+$card-badge-right: 15px !default;
+$card-badge-height: 22px !default;
+$card-badge-padding-horizontal: 10px !default;
+$card-badge-background: $global-primary-background !default;
+$card-badge-color: $global-inverse-color !default;
+$card-badge-font-size: $global-small-font-size !default;
+
+$card-hover-background: $global-muted-background !default;
+
+$card-default-background: $global-muted-background !default;
+$card-default-color: $global-color !default;
+$card-default-title-color: $global-emphasis-color !default;
+$card-default-hover-background: darken($card-default-background, 5%) !default;
+
+$card-primary-background: $global-primary-background !default;
+$card-primary-color: $global-inverse-color !default;
+$card-primary-title-color: $card-primary-color !default;
+$card-primary-hover-background: darken($card-primary-background, 5%) !default;
+$card-primary-color-mode: light !default;
+
+$card-secondary-background: $global-secondary-background !default;
+$card-secondary-color: $global-inverse-color !default;
+$card-secondary-title-color: $card-secondary-color !default;
+$card-secondary-hover-background: darken($card-secondary-background, 5%) !default;
+$card-secondary-color-mode: light !default;
+
+$card-small-body-padding-horizontal: $global-margin !default;
+$card-small-body-padding-vertical: $global-margin !default;
+$card-small-header-padding-horizontal: $global-margin !default;
+$card-small-header-padding-vertical: 13px !default;
+$card-small-footer-padding-horizontal: $global-margin !default;
+$card-small-footer-padding-vertical: $card-small-header-padding-vertical !default;
+
+$card-large-body-padding-horizontal-l: $global-large-gutter !default;
+$card-large-body-padding-vertical-l: $global-large-gutter !default;
+$card-large-header-padding-horizontal-l: $global-large-gutter !default;
+$card-large-header-padding-vertical-l: $global-large-gutter-half !default;
+$card-large-footer-padding-horizontal-l: $global-large-gutter !default;
+$card-large-footer-padding-vertical-l: $global-large-gutter-half !default;
+
+//
+// Modal
+//
+
+$modal-background: rgba(0, 0, 0, 0.6) !default;
+
+$modal-padding-horizontal: 15px !default;
+$modal-padding-horizontal-s: $global-gutter !default;
+$modal-padding-horizontal-m: $global-medium-gutter !default;
+$modal-padding-vertical: $modal-padding-horizontal !default;
+$modal-padding-vertical-s: 50px !default;
+
+$modal-dialog-width: 600px !default;
+$modal-dialog-background: $global-background !default;
+
+$modal-container-width: 1200px !default;
+
+$modal-body-padding-horizontal: $global-gutter !default;
+$modal-body-padding-vertical: $global-gutter !default;
+
+$modal-header-padding-horizontal: $global-gutter !default;
+$modal-header-padding-vertical: $global-gutter-half !default;
+$modal-header-background: $global-muted-background !default;
+
+$modal-footer-padding-horizontal: $global-gutter !default;
+$modal-footer-padding-vertical: $global-gutter-half !default;
+$modal-footer-background: $global-muted-background !default;
+
+$modal-title-font-size: $global-xlarge-font-size !default;
+$modal-title-line-height: 1.3 !default;
+
+$modal-close-position: $global-small-margin !default;
+$modal-close-padding: 5px !default;
+
+$modal-close-outside-position: 0 !default;
+$modal-close-outside-translate: 100% !default;
+$modal-close-outside-color: lighten($global-inverse-color, 20%) !default;
+$modal-close-outside-hover-color: $global-inverse-color !default;
+
+
+$spinner-radius: 20px;
+$stroke-dashoffset: 20px;
+
+
+//
+//  Table
+//
+
+$table-margin-vertical: 30px;
+
+$table-cell-padding-vertical: 16px;
+$table-cell-padding-horizontal: 20px;
+
+$table-header-cell-font-size: $global-font-size !default;
+$table-header-cell-font-weight: bold !default;
+$table-header-cell-color: $global-color !default;
+
+$table-footer-font-size: $global-small-font-size !default;
+
+$table-caption-font-size: $global-small-font-size !default;
+$table-caption-color: $global-muted-color !default;
+
+$table-row-active-background: #ffd !default;
+
+$table-divider-border-width: $global-border-width !default;
+$table-divider-border: $global-border !default;
+
+$table-striped-row-background: $global-muted-background !default;
+
+$table-hover-row-background: $table-row-active-background !default;
+
+$table-small-cell-padding-vertical: 10px !default;
+$table-small-cell-padding-horizontal: 12px !default;
+
+$table-large-cell-padding-vertical: 22px !default;
+$table-large-cell-padding-horizontal: 12px !default;
+
+$table-expand-min-width: 150px !default;

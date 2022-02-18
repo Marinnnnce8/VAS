@@ -1,0 +1,82 @@
+//
+// Main
+//
+// ========================================================================
+
+//
+// Typography
+//
+
+// Family
+$font-default: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-alt: 'Rowdies', 'Helvetica Neue', 'Arial';
+
+// Size
+$font-size: 16px;
+
+// Weight
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+// Line Height
+$line-height: 1.5;
+
+
+//
+// Colours
+//
+$blue: 			#0369c7;
+$blue-light: 	#7bceff;
+$yellow: 		#ffe479;
+$pink-light:	#ffb1e1;
+$pink: 			#ff42b6;
+$dark-purple: 	#1f1447;
+$light-purple:  #6d6882;
+$green: 		#54fde0;
+
+$white: #fff;
+$black: $dark-purple;
+$primary: $blue;
+$secondary: $dark-purple;
+$success: $green;
+$warning: $yellow;
+$danger: $pink;
+$grey: lighten($black, 32%);
+$light-grey: lighten($grey, 32%);
+$off-white: lighten($light-grey, 20%);
+
+
+//
+// Other
+//
+
+// Animation
+$speed: 256ms;
+$speed-fast: 128ms;
+$speed-slow: $speed * 2;
+$timing: ease-in-out;
+$transition: $speed $timing;
+
+
+//
+// UIkit Global Variables
+// https://github.com/uikit/uikit/blob/master/src/scss/components/variables.scss
+//
+// Imports UIkit variable overrides for the theme
+// These may be used by main.scss
+//
+// ========================================================================
+
+@import 'uikit/variables';
+
+//
+// Mmenu Global Variables
+// https://github.com/FrDH/mmenu-js/blob/master/src/_variables.scss
+//
+// Imports Mmenu variable overrides for the theme
+// These may be used by main.scss
+//
+// ========================================================================
+
+@import 'mmenu/variables';

@@ -1,0 +1,29 @@
+body {
+	overflow-x: hidden;
+	position: relative;
+
+	&.has-banner-image {
+
+		&::before {
+			content: '';
+			background-color: $blue;
+			width: 100%;
+			height: 200px;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+}
+
+[data-uk-lightbox] a {
+	cursor: zoom-in;
+}
+
+.page-wrapper {
+	overflow-x: hidden;
+}
+
+.icon {
+	width: 18px;
+	height: 18px;
+}

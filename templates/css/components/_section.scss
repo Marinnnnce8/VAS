@@ -1,0 +1,125 @@
+.section-title {
+	font-size: 34px;
+	margin-top: 0;
+	letter-spacing: -0.02rem;
+	font-weight: 300;
+}
+
+.section-title-small {
+	font-size: 26px;
+}
+
+.section-label {
+	font-size: 16px;
+	line-height: 1.6;
+	color: $blue;
+	letter-spacing: 0.2rem;
+}
+
+.section-label-small {
+	font-size: 14px;
+}
+
+.section-summary {
+	font-size: 18px;
+	line-height: 1.7;
+	color: $light-purple;
+}
+
+
+.section-label + .section-title {
+	margin-top: 20px;
+}
+
+
+.section-header {
+
+	.uk-button-text {
+		font-size: 18px;
+	}
+
+	.section-title + .uk-button-primary {
+		margin-top: 40px;
+	}
+
+	.uk-flex {
+		align-items: baseline;
+	}
+
+	@media(max-width: $breakpoint-xsmall-max) {
+
+		.uk-button-primary,
+		.uk-button-secondary,
+		.uk-button-default {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	@media(min-width: $breakpoint-medium) {
+		max-width: 525px;
+	}
+}
+
+
+
+@media(min-width: $breakpoint-medium) {
+
+	.section-label {
+		font-size: 18px;
+	}
+
+	.section-title {
+		font-size: 44px;
+		margin-bottom: 30px;
+	}
+
+	.section-summary {
+		font-size: 20px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+
+.section-subscribe {
+	padding-bottom: 0 !important;
+	position: relative;
+	z-index: 5;
+
+
+	.infographic {
+		max-width: none;
+		width: 110%;
+		margin-left: -5%;
+	}
+
+	.partner + .partner {
+		margin-left: 20px;
+	}
+
+	@media(min-width: $breakpoint-medium) {
+		padding-bottom: 80px !important;
+	}
+
+	@media(min-width: $breakpoint-large) {
+
+		padding-bottom: 0 !important;
+		margin-bottom: -210px;
+
+		.infographic {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.uk-width-expand {
+			margin-right: -6%;
+		}
+	}
+
+	@media(min-width: $breakpoint-xlarge) {
+
+		.infographic {
+			margin-top: -20px;
+		}
+	}
+}

@@ -1,0 +1,121 @@
+.header {
+	z-index: 1010;
+	position: relative;
+
+	.uk-logo {
+		width: 100px;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			&:last-child {
+				left: 50px;
+				top: 44px;
+				max-height: 50px;
+				max-width: 60px;
+				width: auto;
+				transform: translate(-50%, -66%);
+			}
+		}
+
+		@media(min-width: $breakpoint-large) {
+			width: 180px;
+
+			img {
+
+				&:last-child {
+					left: 90px;
+					top: 80px;
+					max-height: 90px;
+					max-width: 105px;
+				}
+			}
+		}
+
+		@media(min-width: 1400px) {
+			width: 200px;
+
+			img {
+
+				&:last-child {
+					left: 100px;
+					top: 88px;
+					max-height: 100px;
+					max-width: 115px;
+				}
+			}
+		}
+
+		@media(min-width: $breakpoint-xlarge) {
+			width: 251px;
+
+			img {
+
+				&:last-child {
+					left: 125px;
+					top: 110px;
+					max-height: 125px;
+					max-width: 150px;
+				}
+			}
+		}
+	}
+
+	.tools {
+		min-height: 40px;
+
+		.search-toggler {
+
+			color: #fff;
+			transition: color 0.25s;
+
+			svg {
+				width: 25px;
+				height: 25px;
+			}
+
+			&:hover,
+			&:active {
+				color: $green;
+			}
+		}
+
+		@media(min-width: $breakpoint-medium) {
+
+			> * {
+				margin: 0 10px;
+			}
+		}
+
+		@media(min-width: 1400px) {
+			> * {
+				margin: 0 15px;
+			}
+		}
+
+
+		@media(min-width: $breakpoint-medium) and (max-width: $breakpoint-medium-max) {
+
+			padding-left: 0;
+
+			.search-toggler {
+				svg {
+					width: 20px;
+				}
+			}
+
+			.uk-button {
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 13px;
+				line-height: 36px;
+
+			}
+		}
+	}
+}

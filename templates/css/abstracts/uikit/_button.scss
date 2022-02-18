@@ -1,0 +1,141 @@
+@mixin hook-button {
+
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	transition: color 0.3s;
+
+	.icon {
+		margin-left: 20px;
+		width: 15px;
+		height: 15px;
+	}
+}
+// @mixin hook-button-hover(){}
+// @mixin hook-button-focus(){}
+// @mixin hook-button-active(){}
+@mixin hook-button-default {
+	border: 1px solid $dark-purple;
+}
+// @mixin hook-button-default-hover(){}
+// @mixin hook-button-default-active(){}
+@mixin hook-button-primary {
+	border: 0 !important;
+}
+// @mixin hook-button-primary-hover(){}
+// @mixin hook-button-primary-active(){}
+@mixin hook-button-secondary {
+	border: 0 !important;
+
+	> * {
+		&:last-child {
+			background-color: #090028 !important;
+		}
+	}
+}
+//@mixin hook-button-secondary-hover {}
+//@mixin hook-button-secondary-active{}
+// @mixin hook-button-danger(){}
+// @mixin hook-button-danger-hover(){}
+// @mixin hook-button-danger-active(){}
+// @mixin hook-button-disabled(){}
+// @mixin hook-button-small {}
+@mixin hook-button-large {
+
+	.icon {
+		width: 18px;
+		height: 18px;
+	}
+}
+@mixin hook-button-text {
+
+	border-radius: 0 !important;
+	position: relative;
+	padding-bottom: 4px;
+	font-family: $font-alt;
+	font-size: 16px;
+
+	.icon {
+		color: $green;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 100%;
+		border-bottom: 2px solid $button-text-border;
+		transition: right 0.3s ease-out;
+	}
+}
+
+@mixin hook-button-text-hover {
+
+	&::before {
+		right: 0;
+	}
+}
+@mixin hook-button-text-disabled {
+	&::before {
+		display: none;
+	}
+}
+@mixin hook-button-link {
+	border-radius: 0 !important;
+}
+@mixin hook-button-misc {
+
+	.uk-button-primary,
+	.uk-button-secondary,
+	.uk-button-default {
+
+		font-family: $font-alt;
+		font-weight: 300;
+		letter-spacing: -0.02rem;
+
+		> * {
+			position: relative;
+			z-index: 1;
+		}
+
+		> * {
+			&:last-child {
+				position: absolute;
+				display: block;
+				width: 225%;
+				height: 500px;
+				border-radius: 50%;
+				transition: transform 0.4s ease-in-out;
+				transform: translate(-50%, -50%) scale(0);
+				z-index: 0;
+				background-color: $dark-purple;
+			}
+		}
+
+
+
+		&:hover {
+
+			> * {
+				&:last-child {
+					transform: translate(-50%, -50%) scale(1);
+				}
+			}
+		}
+
+
+		@media(max-width: $breakpoint-xsmall-max) {
+			display: block;
+			width: 100%;
+			text-align: left;
+
+			.icon {
+				position: absolute;
+				right: 25px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}

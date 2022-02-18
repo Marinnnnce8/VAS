@@ -1,0 +1,35 @@
+.share-box {
+	text-align: center;
+	margin-top: 100px;
+
+	h6 {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+
+	ul {
+		display: flex;
+		justify-content: center;
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			margin: 0 5px;
+		}
+	}
+
+	a {
+		width: 52px;
+		height: 52px;
+		border-radius: 100%;
+		background-color: $green;
+		color: $dark-purple;
+		line-height: 52px;
+		text-align: center;
+
+		&:hover {
+			background-color: $dark-purple;
+			color: $green;
+		}
+	}
+}

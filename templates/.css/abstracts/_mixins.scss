@@ -1,0 +1,74 @@
+//
+// Main
+//
+
+// Background Icon
+@mixin bg-icon($icon) {
+	background-image: url('data:image/svg+xml;utf8,' + $icon);
+	background-repeat: no-repeat;
+}
+
+// Hover
+@mixin hover {
+	&:hover,
+	&:focus,
+	&:active,
+	&.uk-open,
+	&.uk-active {
+		@content;
+	}
+}
+
+// Image caption
+@mixin image-caption {
+	font-size: 14px;
+	letter-spacing: 0.02rem;
+	color: fade-out(#1f1447, 0.3);
+	padding: $global-small-margin;
+	text-align: center;
+}
+
+// Pseudo Icon
+@mixin pseudo-icon($icon) {
+	@include bg-icon($icon);
+	content: '';
+	background-size: contain;
+	display: inline-block;
+}
+
+// Truncate text
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+
+//
+// UIkit
+// https://github.com/uikit/uikit/tree/master/src/scss
+//
+// Imports UIkit mixin overrides for the theme
+// These are not used by main.scss, although loaded
+//
+// ========================================================================
+
+// Base
+@import 'uikit/base';
+
+// Elements
+@import 'uikit/table';
+@import 'uikit/form';
+@import 'uikit/button';
+@import 'uikit/alert';
+@import 'uikit/accordion';
+
+// Layout
+@import 'uikit/card';
+
+// Navs
+@import 'uikit/navbar';
+@import 'uikit/breadcrumb';
+
+// Utilities
+@import 'uikit/text';

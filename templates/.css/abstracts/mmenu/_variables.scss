@@ -1,0 +1,69 @@
+// Animations
+$mm_transitionDuration: $speed;
+$mm_transitionDelay: $speed;
+$mm_transitionFunction: $timing;
+
+// Colors
+$mm_backgroundColor: transparent;
+$mm_borderColor: transparent;
+$mm_dimmedTextColor: #fff;
+$mm_emphasizedBackgroundColor: transparent;
+$mm_highlightedBackgroundColor: transparent;
+$mm_navbarColor: #fff;
+$mm_textColor: #fff;
+
+// Positioning
+$mm_offsetTop: 80px;
+$mm_offsetRight: 0;
+$mm_offsetBottom: 0;
+$mm_offsetLeft: 0;
+
+// Sizes
+$mm_listitemSize: 44px;
+$mm_btnSize: 50px;
+$mm_padding: $global-small-margin;
+$mm_lineHeight: $global-margin;
+
+$mm_listitemIndent: $mm_padding * 2;
+$mm_navbarSize: $mm_listitemSize;
+$mm_panelPadding: $mm_padding * 2;
+$mm_subopenWidth: $mm_btnSize;
+$mm_subpanelOffset: 30%;
+
+$mm_menuWidth: 0.8;
+$mm_menuMinWidth: 240px;
+$mm_menuMaxWidth: 440px;
+$mm_menuHeight: 0.8;
+$mm_menuMinHeight: 140px;
+$mm_menuMaxHeight: calc(100vh - 80px);
+
+$mm_opt_screenreader: true;
+
+$mm_counterWidth: $mm_btnSize;
+
+$mm_dropdownShadow: 0 2px $global-small-margin rgba($black, 0.3);
+$mm_dropdownTipX: $global-margin;
+$mm_dropdownTipY: $global-small-margin;
+
+$mm_iconbarSize: $mm_btnSize;
+
+$mm_iconpanelSize: $mm_btnSize;
+
+$mm_sectionIndexerSize: $global-margin;
+
+$mm_sidebarCollapsedSize: $mm_btnSize;
+$mm_sidebarExpandedSize: $mm_menuMaxWidth;
+
+$mm_toggleCheckedColor: $success;
+$mm_toggleHeight: $mm_listitemSize - $mm_padding;
+$mm_toggleWidth: ($mm_toggleHeight * 2) - $mm_padding;
+$mm_checkHeight: $mm_btnSize - $mm_padding;
+$mm_checkWidth: $mm_btnSize - $mm_padding;
+
+$mm_fullscreen_full: 1;
+$mm_fullscreen_min: 140px;
+$mm_fullscreen_max: 10000px;
+
+$mm_pagedimOpacity: 0.3;
+$mm_pagedimDelay: $speed;
+$mm_popupShadow: 0 2px $global-small-margin rgba($black, 0.3);

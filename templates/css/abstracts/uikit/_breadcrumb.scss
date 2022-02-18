@@ -1,0 +1,30 @@
+// @mixin hook-breadcrumb(){}
+// @mixin hook-breadcrumb-item(){}
+// @mixin hook-breadcrumb-item-hover(){}
+// @mixin hook-breadcrumb-item-disabled(){}
+// @mixin hook-breadcrumb-item-active(){}
+// @mixin hook-breadcrumb-divider(){}
+@mixin hook-breadcrumb-misc {
+
+	.uk-breadcrumb {
+		@include text-truncate;
+		margin-top: 20px;
+
+		> * > * {
+			font-size: 16px;
+			color: $dark-purple;
+		}
+
+		a {
+			color: $blue;
+		}
+
+		@media(min-width: $breakpoint-small) {
+			margin-top: 30px;
+		}
+
+		@media(min-width: $breakpoint-medium) {
+			max-width: calc(100% - 220px);
+		}
+	}
+}

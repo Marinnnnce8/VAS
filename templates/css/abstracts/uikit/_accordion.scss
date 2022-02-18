@@ -1,0 +1,48 @@
+@mixin hook-accordion-misc {
+
+	.uk-accordion {
+		background-color: #fff;
+		overflow: hidden;
+
+		> li {
+			margin-bottom: 0 !important;
+			margin-top: 20px;
+			background-color: #ebf5ff;
+			border-radius: 15px;
+
+			&::before {
+				display: none !important;
+			}
+		}
+
+		.uk-accordion-title {
+			padding: 20px 30px;
+			font-size: 20px;
+			line-height: 1.7;
+			font-family: $font-alt;
+
+			&::before {
+				background-image: url('../img/caret-down-green.svg');
+				transition: transform 0.2s;
+			}
+		}
+
+		.uk-open {
+			> .uk-accordion-title {
+				&::before {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		.uk-accordion-content {
+			padding: 10px 30px 40px;
+			font-size: 16px;
+			margin-top: 0;
+
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+}

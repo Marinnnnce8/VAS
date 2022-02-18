@@ -1,0 +1,27 @@
+@mixin hook-slideshow {
+
+	.uk-slidenav-next {
+		right: -55px !important;
+		color: $green;
+	}
+
+	.uk-slidenav-previous {
+		color: $green !important;
+		left: -55px;
+	}
+}
+@mixin hook-slideshow-misc {
+
+	.uk-slideshow {
+
+		.uk-slidenav-next {
+			right: -55px !important;
+			color: $green;
+		}
+
+		.uk-slidenav-previous {
+			color: $green !important;
+			left: -55px;
+		}
+	}
+}

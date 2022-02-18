@@ -1,0 +1,159 @@
+.section-shetlandthirdsector {
+
+	.footer {
+		margin-top: 0;
+		padding: 45px 0 100px;
+
+		@media(min-width: 1440px) {
+			padding-bottom: 45px;
+		}
+	}
+
+	.share-box {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+
+	.nb {
+		margin-top: 0;
+	}
+
+	.legal {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	ul.legal {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+
+		li {
+			font-size: 14px;
+		}
+
+		@media(min-width: $breakpoint-small) {
+			flex-direction: row;
+
+			li {
+				margin-left: 30px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+
+		@media(min-width: $breakpoint-medium) {
+			justify-content: flex-end;
+		}
+	}
+
+	.page-wrapper {
+
+		> .section-bg {
+			width: 253px;
+			height: 107px;
+			background: url('../img/wave-green.svg') no-repeat;
+			background-size: cover;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: -30px;
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
+.contact-info {
+	border-radius: 10px;
+	background-color: #fefbef;
+	padding: 20px;
+
+	ul {
+		padding-left: 0;
+		list-style: none;
+		margin: 0;
+
+		> li {
+			font-size: 16px;
+			line-height: 1.7;
+			margin-bottom: 15px;
+
+			strong {
+				display: inline-block;
+				width: 180px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.uk-icon-button {
+		width: 44px;
+		height: 44px;
+		background-color: $blue;
+		color: #fff;
+		margin-right: 5px;
+	}
+
+	@media(min-width: $breakpoint-small) {
+		padding: 37px 28px;
+	}
+}
+
+.sidebar {
+	margin-bottom: 30px;
+
+	.widget {
+		color: #fff;
+		background-color: $blue;
+		border-radius: 15px;
+		padding: 20px;
+
+		a,
+		h4 {
+			color: #fff;
+		}
+
+		h4 {
+			font-size: 20px;
+			font-family: $global-font-family;
+		}
+
+		ul {
+			padding-left: 0;
+			list-style: none;
+			margin: 0;
+			overflow: scroll;
+
+			li {
+				font-size: 16px;
+				line-height: 1.7;
+				margin-bottom: 10px;
+			}
+		}
+
+		@media(min-width: $breakpoint-small) {
+			padding: 37px 28px;
+		}
+	}
+
+	@media(min-width: 1260px) {
+		width: 18%;
+		max-width: 320px;
+		position: absolute;
+		left: 0;
+
+		.widget {
+			border-radius: 0 30px 30px 0;
+		}
+	}
+
+	@media(min-width: 1400px) {
+		width: 20%;
+	}
+}
