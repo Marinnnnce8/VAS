@@ -109,7 +109,7 @@
 				text-align: left;
 			}
 
-			.section-label + .section-label {
+			.section-label+.section-label {
 				margin-top: 30px;
 			}
 
@@ -148,7 +148,7 @@
 			background-position: top center;
 			background-size: cover;
 
-			@media( min-width: $breakpoint-small) {
+			@media(min-width: $breakpoint-small) {
 				padding-bottom: 43%;
 			}
 		}
@@ -169,7 +169,7 @@
 			margin-left: auto;
 			margin-right: auto;
 
-			> .uk-svg {
+			>.uk-svg {
 				position: absolute;
 				width: 100%;
 				top: 0;
@@ -238,9 +238,9 @@
 		}
 
 
-		* + .uk-grid-margin,
-		.uk-grid + .uk-grid,
-		.uk-grid > .uk-grid-margin {
+		*+.uk-grid-margin,
+		.uk-grid+.uk-grid,
+		.uk-grid>.uk-grid-margin {
 			margin-top: 50px;
 		}
 
@@ -251,7 +251,7 @@ $hexagon-margin: 5px;
 $hexagon-width: 250px;
 $hexagon-height: $hexagon-width * .55;
 $honeycomb-max-width: 1400px;
-$viewport-thereshold: $hexagon-width + $hexagon-margin;
+$viewport-thereshold: $hexagon-width+$hexagon-margin;
 
 .honeycomb2 {
 
@@ -290,7 +290,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 			}
 		}
 
-		> * {
+		>* {
 			margin-top: -75px;
 
 			&:first-child,
@@ -313,7 +313,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 		margin-left: -30px;
 		margin-right: -30px;
 
-		> * {
+		>* {
 			margin-top: -68px !important;
 		}
 
@@ -331,7 +331,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 			}
 
 			&:nth-child(2) {
-				> div {
+				>div {
 					&:first-child {
 						margin-left: -100px;
 					}
@@ -340,7 +340,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 
 			&:nth-child(3) {
 
-				> div {
+				>div {
 					&:last-child {
 						margin-right: -155px;
 					}
@@ -350,7 +350,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 			&:nth-child(4),
 			&:nth-child(5) {
 
-				> div {
+				>div {
 					&:last-child {
 						margin-right: -156px;
 					}
@@ -384,7 +384,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 			}
 
 			&:nth-child(3) {
-				> div {
+				>div {
 					&:last-child {
 						margin-right: -200px;
 					}
@@ -393,7 +393,7 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 
 			&:nth-child(5),
 			&:nth-child(4) {
-				> div {
+				>div {
 					&:last-child {
 						margin-right: -197px;
 					}
@@ -401,6 +401,12 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 			}
 		}
 
+	}
+
+	@media(max-width: $breakpoint-xsmall-max) {
+		.w.blank {
+			display: none;
+		}
 	}
 }
 
@@ -485,16 +491,16 @@ $viewport-thereshold: $hexagon-width + $hexagon-margin;
 
 	margin-left: -5px;
 
-	> div {
+	>div {
 		padding-left: 5px;
 	}
 }
 
-* + .uk-grid-margin-xsmall,
-.uk-grid + .uk-grid-row-xsmall,
-.uk-grid + .uk-grid-xsmall,
-.uk-grid-row-xsmall > .uk-grid-margin,
-.uk-grid-xsmall > .uk-grid-margin {
+*+.uk-grid-margin-xsmall,
+.uk-grid+.uk-grid-row-xsmall,
+.uk-grid+.uk-grid-xsmall,
+.uk-grid-row-xsmall>.uk-grid-margin,
+.uk-grid-xsmall>.uk-grid-margin {
 	margin-top: 5px;
 }
 

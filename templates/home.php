@@ -38,7 +38,7 @@ $url = function(int $id) use ($pages) {
 		<div class="image-frame" data-uk-img="<?= $page->banner->count > 1 ? $page->banner->eq(1)->size(1920, 830)->url : "{$urls->templates}img/group.jpg" ?>">
 			<div class="clipped-button">
 				<a href="<?= $url(1054) ?>" class="uk-button uk-button-text">View all our services <?= renderIcon('arrow-right') ?></a>
-				<img src="<?= $urls->templates ?>img/cell.svg" data-uk-svg>
+				<img src="<?= $urls->templates ?>img/cell.svg" data-uk-svg alt="cell shape">
 			</div>
 		</div>
 	</section>

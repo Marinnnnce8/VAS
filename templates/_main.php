@@ -40,7 +40,7 @@ include '_head.php';
 		<?php if($pageHome->body && !$page->isOrg): ?>
 		<div class="uk-alert uk-alert-warning uk-margin-remove top-alert" data-uk-alert hidden>
 			<?= $pageHome->body ?>
-			<a class="uk-alert-close" data-uk-close></a>
+			<button class="uk-alert-close" data-uk-close aria-label="Close the infobox"></button>
 		</div>
 		<?php endif; ?>
 
@@ -52,7 +52,7 @@ include '_head.php';
 
 					<?php else: ?>
 					<a href="<?= $page->isOrg ? $page->organisation->url : $urls->root ?>" class="uk-navbar-item uk-logo">
-						<img src="<?= $urls->templates ?>img/logo-bg.png" alt="">
+						<img src="<?= $urls->templates ?>img/logo-bg.png" alt="white shape" width="503" height="443">
 						<?= (
 							$page->isOrg && $page->organisation->hasField('logo') && $page->organisation->logo->count ?
 								$page->organisation->logo :
@@ -122,13 +122,13 @@ include '_head.php';
 									</div>
 
 									<?php if($page->isHome): ?>
-									<img class="top-image" src="<?= $urlImages ?>hero-logo.png">
+									<img class="top-image" src="<?= $urlImages ?>hero-logo.png" alt="Voluntary Action Shetland" width="776" height="899">
 									<?php endif; ?>
-									<img class="waves" src="<?= $urlImages ?>wave-green.svg">
+									<img class="waves" src="<?= $urlImages ?>wave-green.svg" alt="green wave" width="190" height="138">
 								</div>
 							<?php else: ?>
-								<img class="banner-hex" src="<?= $urlImages ?>banner-hex.svg">
-								<img class="waves" src="<?= $urlImages ?>wave-green.svg">
+								<img class="banner-hex" src="<?= $urlImages ?>banner-hex.svg" alt="hexagon shape" width="371" height="417">
+								<img class="waves" src="<?= $urlImages ?>wave-green.svg" alt="green wave" width="190" height="138">
 							<?php endif; ?>
 						</div>
 					</div>
@@ -219,6 +219,7 @@ include '_head.php';
 										$item->logo->first->render(['srcset' => false]),
 										[
 											'href' => $item->link ?: false,
+											'aria-label' => 'Visit the website',
 											'target' => $item->link ? '_blank' : false,
 											'class' => 'partner',
 										],
@@ -229,7 +230,7 @@ include '_head.php';
 						</div>
 					</div>
 					<div class="uk-width-expand">
-						<img src="<?= $urlImages ?>newsletter-graphic.svg" class="infographic">
+						<img src="<?= $urlImages ?>newsletter-graphic.svg" class="infographic" alt="newsletter graphic" width="843" height="835">
 					</div>
 				</div>
 			</div>
@@ -289,7 +290,7 @@ include '_head.php';
 						<div class="uk-grid uk-grid-match h-100@l" data-uk-grid>
 							<div class="uk-width-1-3@m uk-width-1-2@s">
 								<div class="white-logo">
-									<img src="<?= $urlImages ?>footer-logo.png">
+									<img src="<?= $urlImages ?>footer-logo.png" alt="Voluntary Action Shetland" width="475" height="502">
 									<small>Voluntary Action Shetland is committed to equal opportunities.</small>
 								</div>
 							</div>
@@ -299,7 +300,7 @@ include '_head.php';
 
 										<div class="uk-flex uk-flex-column uk-flex-between">
 											<div class="uk-child-width-1-2@m" data-uk-grid>
-												<div class="uk-width-1-1"><h4>Get in touch</h4></div>
+												<div class="uk-width-1-1"><div class="uk-h4">Get in touch</div></div>
 												<div>
 													<p>
 														<?= $nb->clientName ?><br>
@@ -341,7 +342,7 @@ include '_head.php';
 
 						$nb->wrap(
 							$pages->find([1072, 1075])->explode(function($parent) use ($nb, $tplLink) {
-								return renderHeading($parent->title, 4, ['uk-h5']) .
+								return $nb->wrap($parent->title, '<div class="uk-h5">') .
 									$nb->wrap(
 										$parent->children('limit=4')->each($tplLink),
 										'<ul class="list-alt">'
@@ -407,7 +408,7 @@ include '_head.php';
 							<label class="uk-form-label uk-light"><?= "$lblSearch $nb->siteName" ?>:</label>
 							<div class="uk-grid-small uk-flex-middle" data-uk-grid>
 								<div class="uk-width-expand@s">
-									<input name="q" type="text" maxlength="2048" placeholder="<?= __('Enter keyword') ?>..." aria-invalid="false" title="<?= __('Please enter a keyword') ?>" required="required" value="" class="uk-input" placeholder="<?= $lblSearch ?>...">
+									<input name="q" type="text" maxlength="2048" aria-invalid="false" title="<?= __('Please enter a keyword') ?>" required="required" value="" class="uk-input" placeholder="<?= $lblSearch ?>...">
 								</div>
 								<div class="uk-width-auto@s">
 									<button type="submit" name="submit" class="uk-button uk-button-primary" aria-label="Search">

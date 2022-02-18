@@ -59,6 +59,14 @@ $ogImage = $page->getImage([
 	<meta property="og:url" content="<?= $input->httpUrl ?>">
 	<meta property="og:site_name" content="<?= $nb->siteName ?>">
 
+	<link rel="apple-touch-icon" sizes="180x180" href="<?= $urls->root ?>apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?= $urls->root ?>favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?= $urls->root ?>favicon-16x16.png">
+	<link rel="manifest" href="<?= $urls->root ?>site.webmanifest">
+	<link rel="mask-icon" href="<?= $urls->root ?>safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
 <?php if($page->isArticle): ?>
 	<meta property="og:type" content="article">
 	<meta property="article:published_time" content="<?= $datetime->date('c', $page->getUnformatted('date_pub|published')) ?>">
@@ -82,7 +90,6 @@ $ogImage = $page->getImage([
 <?php endif; ?>
 
 	<link rel="canonical" href="<?= $page->urlCanonical ?>">
-	<link rel="shortcut icon" href="<?= $urls->root ?>favicon.ico">
 
 <?php
 	$pageRSS = $pages->get('template=feed-rss');
