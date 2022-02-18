@@ -192,17 +192,17 @@ function opportunity() {
 									strpos($opportunity->link, '#') === false ? $opportunity->link :
 									'#' . explode('#', $opportunity->link)[1]
 								),
-								'primary uk-margin-right',
+								'primary uk-margin-right uk-margin-top',
 							) :
 							''
 						) .
 						$button(
 							__('View all opportunities'),
 							$page->url,
-							'secondary'
+							'secondary uk-margin-top'
 						),
 						[
-							'class' => 'uk-margin-medium-top',
+							'class' => 'uk-margin-top',
 							'dataUkScrollspy' => [
 								'target' => 'a',
 								'delay' => 128,

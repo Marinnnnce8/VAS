@@ -296,7 +296,6 @@
 
 
 .entry-hex {
-
 	height: 0;
 	position: relative;
 	padding-bottom: 115%;
@@ -383,17 +382,16 @@
 			position: relative;
 		}
 
-		&:hover {
-			.circle {
-				transform: translate3d(-50%, -50%, 1px) scale(1);
-			}
-		}
-
 		> a {
 			text-decoration: none !important;
 		}
 	}
 
+	&:hover {
+		.circle {
+			transform: translate3d(-50%, -50%, 1px) scale(1);
+		}
+	}
 
 	@media(max-width: $breakpoint-xsmall-max) {
 

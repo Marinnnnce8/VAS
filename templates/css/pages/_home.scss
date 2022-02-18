@@ -417,6 +417,10 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 	-webkit-clip-path: url('#clipping-hex-2');
 	clip-path: url('#clipping-hex-2');
 
+	@media (min-width: $breakpoint-large) and (max-width: 1599px) {
+		padding-bottom: 125%;
+	}
+
 	.icon-s-plane {
 		width: 80px !important;
 	}
@@ -459,10 +463,11 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 
 	h3 {
 		margin-top: 15px;
-		font-size: 26px;
+		font-size: 24px;
 		letter-spacing: -0.02rem;
 		line-height: 1;
 		margin-bottom: 15px;
+		position: relative;
 
 		@media(min-width: $breakpoint-large) and (max-width: 1599px) {
 			font-size: 20px;
@@ -473,6 +478,10 @@ $viewport-thereshold: $hexagon-width+$hexagon-margin;
 		padding-left: 0;
 		list-style: none;
 		margin-bottom: 0;
+
+		li {
+			font-size: 16px;
+		}
 	}
 
 	p,

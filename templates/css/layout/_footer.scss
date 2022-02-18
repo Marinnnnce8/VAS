@@ -178,13 +178,22 @@
 		padding: 0;
 		color: $dark-purple;
 		text-align: center;
+		transition: .35s ease;
 
 		> svg {
 			width: 24px;
 			height: 24px;
+			position: relative;
+			transition: .35s ease;
 
 			&:last-child {
 				display: none;
+			}
+		}
+
+		@include hover {
+			> svg {
+				transform: translateY(5px);
 			}
 		}
 	}
@@ -284,7 +293,7 @@
 					content: '';
 					background-color: #fff;
 					width: 100%;
-					height: 200%;
+					height: 230%;
 					display: block;
 					left: 0;
 					bottom: 100%;

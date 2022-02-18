@@ -110,12 +110,16 @@
 		border-radius: 15px;
 		overflow: hidden;
 		position: relative;
+		min-height: 410px;
 		margin-bottom: 30px;
 		cursor: pointer;
 
 		img {
-			width: 100%;
-			height: auto;
+			min-height: 410px;
+			width: auto;
+			height: 410px;
+			display: block;
+			max-width: none;
 		}
 
 		.uk-overlay {

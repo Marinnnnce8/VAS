@@ -21,9 +21,17 @@ body {
 
 .page-wrapper {
 	overflow-x: hidden;
+
+	main {
+		min-height: 860px;
+	}
 }
 
 .icon {
 	width: 18px;
 	height: 18px;
+}
+
+.uk-button {
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
 }

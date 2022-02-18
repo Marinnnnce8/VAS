@@ -152,7 +152,7 @@ include '_head.php';
 							$nb->wrap($page->organisation->children->each($tplLink), 'ul'),
 							'<div class="widget">'
 						),
-						'<aside class="sidebar">'
+						'<aside class="sidebar uk-position-z-index">'
 					);
 				}
 
