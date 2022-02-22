@@ -1,12 +1,42 @@
 @media print {
 
+	*,
+	::after,
+	::before,
+	.icon {
+		background: 0 0 !important;
+		color: $black !important;
+		fill: $black !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
 	.header,
 	.footer,
 	.uk-button,
 	.uk-breadcrumb,
 	.uk-pagination,
 	.uk-modal,
+	.section-cta,
+	.banner.no-image .waves,
+	.banner.no-image .banner-hex,
+	.entry-hex>.uk-svg,
+	.scvo-widget,
+	.share-box,
 	.nb-form {
 		display: none !important;
+	}
+
+	.entry .uk-card-media-top,
+	.section-subscribe {
+		margin-bottom: 0 !important;
+	}
+
+	.honeycomb2>* {
+		margin-top: 0 !important;
+	}
+
+	.uk-article .date .icon use {
+		fill: transparent !important;
 	}
 }
